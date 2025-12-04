@@ -102,6 +102,7 @@ const ProductDetailContent: React.FC<ProductDetailContentProps> = ({id}) => {
             >
                 {data?.images?.map((_image, i) => (
                     <Avatar
+                        key={`data.title_image_${i}`}
                         src={data.images && data.images[i]}
                         alt={data.title}
                         variant="rounded"
