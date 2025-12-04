@@ -8,7 +8,7 @@ import Typography from "@mui/material/Typography";
 import ProductsPage from "./features/products/pages/ProductsPage";
 import ThemeToggle from "./components/ThemeToggle";
 
-export default function App() {
+const App = () => {
     return (
         <Container
             maxWidth="lg"
@@ -33,3 +33,5 @@ export default function App() {
         </Container>
     );
 }
+
+export default App;

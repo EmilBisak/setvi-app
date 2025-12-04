@@ -12,7 +12,7 @@ import {Product} from "../../../types/product";
 import {useProductsInfinite} from "../hooks/useProductsQuery";
 
 
-type Props = {
+type ProductsTableProps = {
     q?: string;
     category?: string;
     page: number;
@@ -24,7 +24,7 @@ type Props = {
 const ROW_HEIGHT = 72;
 const HEADER_HEIGHT = 56;
 
-export default function ProductsTable(
+const ProductsTable: React.FC<ProductsTableProps> = (
     {
         q,
         category,
@@ -32,7 +32,7 @@ export default function ProductsTable(
         onPageChange,
         onRowClick,
         screenHeight,
-    }: Props) {
+    }) => {
 
     const {
         data,
@@ -254,3 +254,5 @@ export default function ProductsTable(
         </Paper>
     );
 }
+
+export default ProductsTable;
